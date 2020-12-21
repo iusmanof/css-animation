@@ -1,0 +1,43 @@
+body
+    background-color: rgba(240, 230, 92, 0.534)
+    font-family: 'Long Cang', cursive
+
+.content
+    padding: 40px
+    &__title
+        font-size: 5rem
+
+    &__cicrle
+        width: 150px
+        height: 150px
+        background-color: rgb(8, 250, 250)
+        position: relative
+        border-radius: 50%
+        left: 0
+        animation-name: test-circle
+        animation-duration: 2s
+        animation-timing-function: linear
+        animation-iteration-count: infinite
+        // animation-iteration-count: 1
+        animation-direction: reverse
+        animation-play-state: running
+        // animation-delay: 1s
+        animation-fill-mode: forwards
+        animation: name duration timing-function delay iteration-count direction fill-mode
+    &__cicrle:hover
+        animation-play-state: paused
+        // animation-name: none  
+        // reset animation
+
+@keyframes test-circle
+    0%
+        left: 0
+    25%
+        top: 10px
+    50%
+        top: 20px
+        border-radius: 0%
+    75%
+        top: 10px
+    100%
+        left: 500px
